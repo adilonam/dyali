@@ -6,12 +6,12 @@ import { TabMenu } from 'primereact/tabmenu';
 
 
 export const NavBar = (props)=> {
-    const [activeIndex, setActiveIndex] = useState(1);
+  
 
     const items = [
         {label: 'DYALI  ', icon: ''},
         {label: 'Home', icon: 'pi pi-fw pi-home'},
-        {label: 'Calendar', icon: 'pi pi-fw pi-calendar'},
+        {label: 'Product', icon: 'pi pi-fw pi-calendar'},
         {label: 'Edit', icon: 'pi pi-fw pi-pencil'},
         {label: 'Documentation', icon: 'pi pi-fw pi-file'},
         {label: 'Settings', icon: 'pi pi-fw pi-cog'}
@@ -22,7 +22,7 @@ export const NavBar = (props)=> {
            
             <div className="card">
             
-                <TabMenu model={items} activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)} />
+                <TabMenu model={items} activeIndex={props.activeIndex} onTabChange={(e) => props.setActiveIndex(e.index)} />
             </div>
         </div>
 
